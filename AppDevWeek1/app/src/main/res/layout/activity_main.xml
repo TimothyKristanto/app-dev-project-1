@@ -26,7 +26,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="List of Users" />
+        app:subtitleTextColor="#FFFFFF"
+        app:title="List of Users"
+        app:titleTextColor="#FFFFFF" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnTambahUserMain"

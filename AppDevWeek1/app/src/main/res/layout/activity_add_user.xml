@@ -80,7 +80,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_action_back" />
+        app:navigationIcon="@drawable/ic_action_back"
+        app:titleTextColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnAddEditAddEditUser"
