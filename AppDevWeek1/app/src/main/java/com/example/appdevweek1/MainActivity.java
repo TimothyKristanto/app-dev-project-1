@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements MainRVAdapter.Use
     private MainRVAdapter adapter;
     private ArrayList<DataUser> listUser;
     private FloatingActionButton btnTambahUserMain;
+    private TextView txtNoDataMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainRVAdapter.Use
         recyclerviewMain = findViewById(R.id.recyclerviewMain);
         listUser = new ArrayList<>();
         btnTambahUserMain = findViewById(R.id.btnTambahUserMain);
+        txtNoDataMain = findViewById(R.id.txtNoDataMain);
     }
 
     private void initAdapter(){
@@ -57,6 +60,12 @@ public class MainActivity extends AppCompatActivity implements MainRVAdapter.Use
         Intent intent = this.getIntent();
         if(intent.getParcelableArrayListExtra("listUser") != null){
             listUser = intent.getParcelableArrayListExtra("listUser");
+        }
+
+        if(listUser.size() > 0){
+            txtNoDataMain.setVisibility(View.INVISIBLE);
+        }else{
+            txtNoDataMain.setVisibility(View.VISIBLE);
         }
     }
 
